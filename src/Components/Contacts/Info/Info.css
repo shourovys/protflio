@@ -1,0 +1,21 @@
+.info-container {
+}
+.info-container > div {
+    display: flex;
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin: 1rem 0;
+}
+.key {
+    margin-left: 0.1rem;
+    margin-right: 0.5rem;
+}
+.value {
+    margin-left: 0.5rem;
+}
+@media screen and (max-width: 350px) {
+    .info-container > div {
+        font-size: 1.1rem;
+        margin: 0.6rem 0;
+    }
+}
