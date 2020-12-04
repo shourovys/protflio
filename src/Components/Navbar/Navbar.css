@@ -1,5 +1,8 @@
 .MuiAppBar-colorPrimary {
-    background-color: #2196f3 !important;
+    background-color: #145ad3 !important;
+}
+.nav-name {
+    margin-left: 1.5rem;
 }
 .top-nev {
     margin: 0 1rem !important;

@@ -4,6 +4,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import MenuIcon from '@material-ui/icons/Menu';
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import Nav from './Nav/Nav';
 import './Navbar.css';
 import { NavbarStyle } from './style';
@@ -12,6 +13,7 @@ const useStyles = NavbarStyle;
 
 export default function Navbar() {
   const classes = useStyles();
+  const history = useHistory()
 
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(false);
 
@@ -34,21 +36,21 @@ export default function Navbar() {
     <div className={classes.grow}>
       <AppBar position="static" >
         <Toolbar>
-          <Typography className={classes.title} variant="h5" noWrap>
-            Shourov Saha
+          <Typography className='nav-name' variant="h4" noWrap>
+            SS
           </Typography>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
-            <Typography variant="h6" noWrap className='top-nev'>
+            <Typography variant="h6" noWrap className='top-nev' onClick={()=>history.push('/')}>
                 Home
             </Typography>
-            <Typography variant="h6" noWrap className='top-nev'>
+            <Typography variant="h6" noWrap className='top-nev' onClick={()=>history.push('/projects')}>
                 Projects
             </Typography>
-            <Typography variant="h6" noWrap className='top-nev'>
+            <Typography variant="h6" noWrap className='top-nev' onClick={()=>history.push('/about')}>
                 About
             </Typography>
-            <Typography variant="h6" noWrap className='top-nev'>
+            <Typography variant="h6" noWrap className='top-nev' onClick={()=>history.push('/contacts')}>
                 Contacts
             </Typography>
           </div>
