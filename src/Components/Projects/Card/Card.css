@@ -1,0 +1,83 @@
+.project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin: 1rem !important;
+}
+
+.project-info {
+    background-color: #172a45;
+    width: 45vw;
+    padding: 1rem;
+    margin-left: -2rem;
+    min-height: 18rem;
+    background-image: url(//lmpixels.com/wp/aveo/wp-content/uploads/2017/09/sp_main_bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+}
+.project-info > h2 {
+    margin: 0.5rem 0;
+    padding-bottom: 0.2rem;
+    border-bottom: 2px solid #4b5769;
+}
+.description {
+}
+.description > li > img {
+    position: relative;
+    top: 4px;
+    margin-right: 0.5rem;
+}
+.description > li {
+    list-style: none;
+    margin: 0.3rem 0;
+}
+
+.techList {
+    margin-left: -0.4rem;
+    margin-top: 0.7rem;
+}
+.techList > li {
+    display: inline-block;
+    list-style: none;
+    font-size: 1rem;
+    background-color: #4b5769;
+    margin: 0.2rem;
+    padding: 0.2rem 0.4rem;
+    border-radius: 5px;
+}
+.icons {
+    margin-top: 0.7rem;
+}
+.icon {
+    margin-right: 0.8rem;
+    color: white;
+}
+
+@media screen and (max-width: 1100px) {
+    .project {
+        flex-wrap: wrap;
+    }
+    .project-info {
+        width: 36rem;
+        margin-left: 0rem;
+        margin-top: -2rem;
+    }
+}
+@media screen and (max-width: 630px) {
+    .big-img > img {
+        width: 90vw !important;
+    }
+    .project-info {
+        width: 80vw;
+        margin-left: 0rem;
+        margin-top: -2rem;
+    }
+    .techList > li {
+        font-size: 0.8rem;
+    }
+    .icon {
+        margin-right: 1.2rem;
+    }
+}

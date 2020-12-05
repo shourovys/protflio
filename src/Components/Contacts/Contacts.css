@@ -2,10 +2,10 @@
     min-height: 78vh;
     margin: 1rem;
     border-radius: 15px;
-    background-color: whitesmoke;
+    /* background-color: whitesmoke; */
     background-image: url(//lmpixels.com/wp/aveo/wp-content/uploads/2017/09/sp_main_bg.png);
     background-size: cover;
-    background-position: center center;
+    /* background-position: center center; */
     background-repeat: no-repeat;
 }
 .contacts {

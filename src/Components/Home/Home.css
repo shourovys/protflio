@@ -3,7 +3,8 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    background-color: #2667ff;
+    /* background-color: #2667ff; */
+    /* background-color: #172a45; */
     min-height: 78vh;
     border-radius: 15px;
     margin: 1rem;
@@ -11,7 +12,7 @@
     color: white;
     background-image: url(//lmpixels.com/wp/aveo/wp-content/uploads/2017/09/sp_main_bg.png);
     background-size: cover;
-    background-position: center center;
+    /* background-position: initial; */
     background-repeat: no-repeat;
 }
 .img {

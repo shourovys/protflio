@@ -2,11 +2,10 @@
     min-height: 78vh;
     margin: 1rem;
     border-radius: 15px;
-    background-color: whitesmoke;
-    /* background-color: yellowgreen; */
+    /* background-color: whitesmoke; */
     background-image: url(//lmpixels.com/wp/aveo/wp-content/uploads/2017/09/sp_main_bg.png);
     background-size: cover;
-    background-position: center center;
+    /* background-position: center center; */
     background-repeat: no-repeat;
 }
 .about {
@@ -65,11 +64,13 @@
 .skill-container > li {
     list-style: none;
     font-size: 1rem;
-    background-color: lightgray;
+    /* background-color: lightgray; */
+    background-color: #4b5769;
     margin: 0.3rem;
     padding: 0.2rem 0.4rem;
     border-radius: 5px;
-    border: 1px solid white;
+    font-weight: 500;
+    /* border: 1px solid white;s */
 }
 
 @media screen and (max-width: 790px) {
