@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { AnimatePresence } from 'framer-motion';
+import { Route, Switch, useLocation } from "react-router-dom";
 import './App.css';
 import About from "./Components/About/About";
 import Contacts from "./Components/Contacts/Contacts";
@@ -7,28 +8,29 @@ import Navbar from './Components/Navbar/Navbar';
 import Projects from "./Components/Projects/Projects";
 
 function App() {
+   const location = useLocation()
   return (
     <div className="App">
-      <Router>
         <Navbar/>
-        <Switch>
-          <Route exact path='/'>
-             <Home/>
-          </Route>
-          <Route path='/home'>
-             <Home/>
-          </Route>
-          <Route path='/projects'>
-             <Projects/>
-          </Route>
-          <Route path='/about'>
-             <About/>
-          </Route>
-          <Route path='/contacts'>
-             <Contacts/>
-          </Route>
-        </Switch>
-     </Router>
+        <AnimatePresence exitBeforeEnter >
+         <Switch location={location} key={location.key}>
+            <Route exact path='/'>
+               <Home/>
+            </Route>
+            <Route path='/home'>
+               <Home/>
+            </Route>
+            <Route path='/projects'>
+               <Projects/>
+            </Route>
+            <Route path='/about'>
+               <About/>
+            </Route>
+            <Route path='/contacts'>
+               <Contacts/>
+            </Route>
+         </Switch>
+        </AnimatePresence>
     </div>
   );
 }

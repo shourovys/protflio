@@ -1,9 +1,11 @@
+import { motion } from 'framer-motion';
 import React from 'react';
+import { textVariant } from '../../animation/Animation';
 import './Info.css';
 
 const Info = () => {
     return (
-            <div className='info-container'>
+            <motion.div className='info-container' variants={textVariant}>
                 <div>
                     <div className="key">Name:</div>
                     <div className="value">Shouov Saha</div>
@@ -20,7 +22,7 @@ const Info = () => {
                     <div className="key">Home:</div>
                     <div className="value">Tangail, Dhaka</div>
                 </div>
-            </div>
+            </motion.div>
     );
 };
 

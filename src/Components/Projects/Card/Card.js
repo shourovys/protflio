@@ -1,21 +1,26 @@
 import { Tooltip } from '@material-ui/core';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import WebIcon from '@material-ui/icons/Web';
+import { motion } from 'framer-motion';
 import React from 'react';
 import svg from '../../../img/svg.svg';
+import { btnVariant, imgVariant } from '../../animation/Animation';
 import './Card.css';
+
 const Card = ({data}) => {
     const { name, img, description, techList, live, clientSide, serverSide}=data
     return (
         <div className='project'>
-            <div className="project-img">
+            <motion.div className="project-img">
                 <Tooltip title="Live Side" aria-label="Live Side">
                     <a className='big-img' href={live} rel="noreferrer" target="_blank">
-                        <img src={img} alt=""/>
+                        <motion.img variants={imgVariant} src={img} alt=""/>
                     </a>
                 </Tooltip>
-            </div>
-            <div className="project-info">
+            </motion.div>
+            <motion.div className="project-info" 
+                variants={btnVariant}
+            >
                 <h2>{name}</h2>
                 <div className='description'>
                     {
@@ -42,13 +47,16 @@ const Card = ({data}) => {
                         <GitHubIcon className='icon'/>
                     </a>
                 </Tooltip>
-                <Tooltip title="Backend Repository" aria-label="Live Side">
-                    <a href={serverSide} rel="noreferrer" target="_blank">
-                        <GitHubIcon className='icon'/>
-                    </a>
-                </Tooltip>
+                {
+                    serverSide &&
+                    <Tooltip title="Backend Repository" aria-label="Live Side">
+                        <a href={serverSide} rel="noreferrer" target="_blank">
+                            <GitHubIcon className='icon'/>
+                        </a>
+                    </Tooltip>
+                }
                 </div>
-            </div>
+            </motion.div>
         </div>
     );
 };

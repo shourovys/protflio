@@ -1,4 +1,6 @@
+import { motion } from 'framer-motion';
 import React from 'react';
+import { containerVariant } from '../animation/Animation';
 import './Contacts.css';
 import Form from './Form/Form';
 import Info from './Info/Info';
@@ -6,7 +8,12 @@ import Info from './Info/Info';
 
 const Contacts = () => {
     return (
-        <div className="contacts-container">
+        <motion.div className="contacts-container"
+        variants={containerVariant}
+        initial='initial'
+        animate='animate'
+        exit='exit'
+        >
             <div className="contacts">
                 <div className="form">
                     <h1>Send A Massage</h1>
@@ -17,7 +24,7 @@ const Contacts = () => {
                     <Info/>
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 

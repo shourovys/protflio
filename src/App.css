@@ -4,6 +4,7 @@ body {
     font-family: "Roboto", sans-serif;
     background-color: #0a192f;
     color: white;
+    overflow-x: hidden;
 }
 .btn,
 .resume-btn {
@@ -21,8 +22,8 @@ body {
     cursor: pointer;
 }
 .resume-btn {
-    color: #2667ff;
-    background: white;
+    color: white;
+    background: #2667ff;
     border: 1px solid #3930d8;
 }
 .btn {

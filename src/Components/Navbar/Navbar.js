@@ -4,7 +4,8 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import MenuIcon from '@material-ui/icons/Menu';
 import React from 'react';
-import { useHistory } from 'react-router-dom';
+import { useHistory, useLocation } from 'react-router-dom';
+import logo from '../../img/logo.png';
 import Nav from './Nav/Nav';
 import './Navbar.css';
 import { NavbarStyle } from './style';
@@ -14,7 +15,8 @@ const useStyles = NavbarStyle;
 export default function Navbar() {
   const classes = useStyles();
   const history = useHistory()
-
+  const location = useLocation()
+  
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(false);
 
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
@@ -37,22 +39,48 @@ export default function Navbar() {
       <AppBar position="static" >
         <Toolbar>
           <Typography className='nav-name' variant="h4" noWrap>
-            SS
+            <img src={logo} alt="" onClick={()=>history.push('/')} style={{cursor:'pointer'}}/>
+            <img src={logo} alt="" onClick={()=>history.push('/')} style={{cursor:'pointer'}}/>
           </Typography>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
-            <Typography variant="h6" noWrap className='top-nev' onClick={()=>history.push('/')}>
+            <Typography 
+              style={{borderBottom:location.pathname==='/' && '2px solid white'}} 
+              variant="h6" 
+              noWrap 
+              className='top-nev' 
+              onClick={()=>history.push('/')}
+            >
                 Home
             </Typography>
-            <Typography variant="h6" noWrap className='top-nev' onClick={()=>history.push('/projects')}>
+            <Typography 
+              style={{borderBottom:location.pathname==='/projects' && '2px solid white'}} 
+              variant="h6" 
+              noWrap 
+              className='top-nev' 
+              onClick={()=>history.push('/projects')}
+              >
                 Projects
             </Typography>
-            <Typography variant="h6" noWrap className='top-nev' onClick={()=>history.push('/about')}>
+            <Typography 
+              style={{borderBottom:location.pathname==='/about' && '2px solid white'}} 
+              variant="h6" 
+              noWrap 
+              className='top-nev' 
+              onClick={()=>history.push('/about')}
+              >
                 About
             </Typography>
-            <Typography variant="h6" noWrap className='top-nev' onClick={()=>history.push('/contacts')}>
+            <Typography 
+              style={{borderBottom:location.pathname==='/contacts' && '2px solid white'}} 
+              variant="h6" 
+              noWrap 
+              className='top-nev' 
+              onClick={()=>history.push('/contacts')}
+              >
                 Contacts
             </Typography>
+            
           </div>
           <div className={classes.sectionMobile}>
             <IconButton
@@ -67,9 +95,10 @@ export default function Navbar() {
           </div>
         </Toolbar>
       </AppBar>
-{
-      isMobileMenuOpen && 
-      <Nav mobileMoreAnchorEl={mobileMoreAnchorEl} mobileMenuId={mobileMenuId} isMobileMenuOpen={isMobileMenuOpen}  handleMobileMenuOpen={handleMobileMenuOpen} handleMobileMenuClose={handleMobileMenuClose}/>
+      
+      {
+        isMobileMenuOpen && 
+        <Nav mobileMoreAnchorEl={mobileMoreAnchorEl} mobileMenuId={mobileMenuId} isMobileMenuOpen={isMobileMenuOpen}  handleMobileMenuOpen={handleMobileMenuOpen} handleMobileMenuClose={handleMobileMenuClose}/>
       }
 
     </div>

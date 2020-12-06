@@ -1,7 +1,7 @@
 .nav-item-container {
     width: 8rem;
     /* height: 89vh; */
-    background-color: blue;
+    background-color: #172a45;
     position: absolute;
     top: 48px;
     right: 0;
@@ -14,6 +14,7 @@
     display: none;
     text-align: center;
     height: 100vh;
+    z-index: 100;
 }
 
 @media screen and (max-width: 955px) {
