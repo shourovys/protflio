@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import React from 'react';
+import cv from '../../img/Shourov_Saha_CV.pdf';
 import { btnVariant } from '../animation/Animation';
-import cv from '../../img/cv.pdf'
 
 const ResumeBtn = () => {
     return (
