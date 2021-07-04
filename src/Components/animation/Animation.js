@@ -18,20 +18,31 @@ export const containerVariant = {
   export const textVariant = {
     initial: {
         opacity:0,
-      y: '80px',
+      y: '10px',
     },
     animate: {
         opacity:1,
       y: 0,
-      transition: { type: 'spring', stiffness: 120 }
+      transition: { duration: 1 }
+    }
+  }
+  export const logoVariant = {
+    initial: {
+        opacity:0,
+    },
+    animate: {
+        opacity:1,
+      transition: { duration: 2}
     }
   }
 
   export const btnVariant = {
     initial: {
+      opacity:0,
       x: '60vw'
     },
     animate: {
+      opacity:1,
       x: 0,
       transition: { type: 'spring', stiffness: 120 }
     },
@@ -45,9 +56,11 @@ export const containerVariant = {
   }
   export const imgVariant = {
     initial: {
-        x: '-120vw'
+      opacity:0,
+        x: '-50vw'
       },
       animate: {
+      opacity:1,
         x: 0,
         transition: {delly:1 ,type: 'spring', stiffness: 120 }
       }

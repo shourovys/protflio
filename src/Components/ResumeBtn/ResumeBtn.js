@@ -1,10 +1,11 @@
 import { motion } from 'framer-motion';
 import React from 'react';
 import { btnVariant } from '../animation/Animation';
+import cv from '../../img/cv.pdf'
 
 const ResumeBtn = () => {
     return (
-        <a href='https://docs.google.com/document/d/1pFWTC4aB4qPYedsos-RYoiMOmQEWUjaDRrX3xFPBeA0/edit?usp=sharing' rel="noreferrer" target="_blank">
+        <a href={cv} download >
             <motion.button variants={btnVariant} whileHover="whileHover" className="resume-btn">Get Resume</motion.button>
         </a>
         

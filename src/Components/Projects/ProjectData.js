@@ -61,7 +61,7 @@ export const projectsData = [
         'javascript all core concepts are used in this project.'
         ],
         techList: ['Html5', 'Css3', 'JavaScript( ES6 )'],
-        live:'https://github.com/shourovys/12-vanilla-javascript-projects',
+        live:'https://kind-johnson-a26447.netlify.app/',
         clientSide:'https://github.com/shourovys/12-vanilla-javascript-projects'
     },
 ]

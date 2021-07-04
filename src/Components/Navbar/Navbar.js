@@ -3,9 +3,11 @@ import IconButton from '@material-ui/core/IconButton';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import MenuIcon from '@material-ui/icons/Menu';
+import { motion } from 'framer-motion';
 import React from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
 import logo from '../../img/logo.png';
+import { logoVariant } from '../animation/Animation';
 import Nav from './Nav/Nav';
 import './Navbar.css';
 import { NavbarStyle } from './style';
@@ -39,8 +41,8 @@ export default function Navbar() {
       <AppBar position="static" >
         <Toolbar>
           <Typography className='nav-name' variant="h4" noWrap>
-            <img src={logo} alt="" onClick={()=>history.push('/')} style={{cursor:'pointer'}}/>
-            <img src={logo} alt="" onClick={()=>history.push('/')} style={{cursor:'pointer'}}/>
+            <motion.img variants={logoVariant} initial='initial' animate='animate' src={logo} alt="" onClick={()=>history.push('/')} style={{cursor:'pointer'}}/>
+            <motion.img variants={logoVariant} initial='initial' animate='animate' src={logo} alt="" onClick={()=>history.push('/')} style={{cursor:'pointer'}}/>
           </Typography>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
